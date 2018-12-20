@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/select_sao"
+          android:title="SAO"
+          android:orderInCategory="100"
+          app:showAsAction="never"/>
+    <item android:id="@+id/select_Onepicec"
+          android:title="Onepicec"
+          android:orderInCategory="100"
+          app:showAsAction="never"/>
+    <item android:id="@+id/select_Miku"
+          android:title="Miku"
+          android:orderInCategory="100"
+          app:showAsAction="never"/>
+    <item android:id="@+id/select_Gundum"
+
+          android:title="Gundum"
+          android:orderInCategory="100"
+          app:showAsAction="never"/>
+    <item android:id="@+id/select_other"
+
+          android:title="Other"
+          android:orderInCategory="100"
+          app:showAsAction="never"/>
+</menu>

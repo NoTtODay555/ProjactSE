@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "614205862255",
+    "firebase_url": "https://seprojact.firebaseio.com",
+    "project_id": "seprojact",
+    "storage_bucket": "seprojact.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:614205862255:android:a242926e794bb7fe",
+        "android_client_info": {
+          "package_name": "com.example.napat.trade"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "614205862255-qiuphi7fso4atnnqvc38lisbvtjt29uf.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.napat.trade",
+            "certificate_hash": "3cbbaf68d90616c964a5554f7c69df5ee92401c5"
+          }
+        },
+        {
+          "client_id": "614205862255-41l66fm0r708rrhfkocm9t1clklh2u3i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyATcjgA3nstKt_nqqT7Sowu3KGtbXU-I3c"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "614205862255-41l66fm0r708rrhfkocm9t1clklh2u3i.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
