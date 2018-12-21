@@ -104,7 +104,7 @@ class Sreach : AppCompatActivity(),View.OnClickListener {
         }
         rv_srech.apply {
             layoutManager = LinearLayoutManager(this@Sreach)
-            val recyclableAdapter = RecycleView(this@Sreach,figerList )
+            val recyclableAdapter = RecycleView(this@Sreach,figerList,"1")
             adapter = recyclableAdapter
         }
 
@@ -114,8 +114,6 @@ class Sreach : AppCompatActivity(),View.OnClickListener {
         mUserDetailReference = FirebaseDatabase.getInstance().getReference("figer/"+x+"/")
         val childEventListener = object : ChildEventListener {
             override fun onCancelled(p0: DatabaseError) {
-                Log.e(TAG, "postMessages:onCancelled", p0!!.toException())
-                Toast.makeText(this@Sreach, "Failed to load Message.", Toast.LENGTH_SHORT).show()
             }
 
             override fun onChildMoved(p0: DataSnapshot, p1: String?) {
@@ -136,12 +134,11 @@ class Sreach : AppCompatActivity(),View.OnClickListener {
 
             override fun onChildAdded(p0: DataSnapshot, p1: String?) {
                 val message = p0.getValue(figerAll::class.java)
-
                 figerList.add(message!!)
                 Log.e(TAG, "onChildAdded:" + message.itemName + p1)
                 Log.e(TAG,figerList.toString())
                 rv_srech.apply {
-                    val recyclableAdapter = RecycleView(this@Sreach,figerList )
+                    val recyclableAdapter = RecycleView(this@Sreach,figerList,"1")
                     adapter = recyclableAdapter
                 }
             }

@@ -9,11 +9,13 @@ import android.util.Log
 import android.widget.Toast
 import com.example.napat.trade.R
 import com.example.napat.trade.data.User
+import com.example.napat.trade.data.figerAll
 import com.example.napat.trade.data.userXXX
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.database.FirebaseDatabase
 import kotlinx.android.synthetic.main.activity_sige_in.*
+import kotlinx.android.synthetic.main.layout_signin.*
 
 class SigeIn : AppCompatActivity() {
 
@@ -27,7 +29,10 @@ class SigeIn : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sige_in)
 
-
+        imageView4.setOnClickListener {
+            this.finish()
+            startActivity(Intent(this,Login::class.java))
+        }
         bt_signUp.setOnClickListener {
             mAuth = FirebaseAuth.getInstance()
             val user = mAuth!!.currentUser
@@ -41,23 +46,21 @@ class SigeIn : AppCompatActivity() {
             val provice = et_provice.text.toString().trim()
             val zipcode = et_zipCode.text.toString().trim()
             val idCard = et_idCard.text.toString().trim()
-            val Username  = userXXX("0",username,password,surname,tele,facebookName, address, district, provice,zipcode,idCard)
+            val paddingException = arrayListOf<figerAll>()
+            val completed = arrayListOf<figerAll>()
+            val sentExchange = arrayListOf<figerAll>()
+            val awaiting = arrayListOf<figerAll>()
+
+            val request = arrayListOf<figerAll>()
+            val Username  = userXXX("0",username,password
+                ,surname,tele,facebookName, address, district, provice,zipcode
+                ,idCard,paddingException,completed, sentExchange, awaiting, request)
             createAccount(username,password,Username)
+
 
         }
     }
-    private fun registerUser(
-        Username: userXXX,
-        user: FirebaseUser?
-    ) {
-        progressDialog?.setMessage("Registering Please Wait...")
-        progressDialog?.show()
-//        val userValues = Username.toMap()
-//        val chuildUpdates = HashMap<String,Any>()
-//        val key = databaseReference!!.child("user").push().key
 
-        user?.uid?.let { FirebaseDatabase.getInstance().reference.child("users").child(it).setValue(Username) }
-    }
     private fun createAccount(
         email: String,
         password: String,
@@ -83,18 +86,7 @@ class SigeIn : AppCompatActivity() {
                 }
             }
     }
-    private fun writeNewUser(userId: String, username: String?, email: String?) {
-        val user = User(username, email)
 
-        FirebaseDatabase.getInstance().reference.child("users").child(userId).setValue(user)
-    }
-    private fun getUsernameFromEmail(email: String?): String {
-        return if (email!!.contains("@")) {
-            email.split("@".toRegex()).dropLastWhile { it.isEmpty() }.toTypedArray()[0]
-        } else {
-            email
-        }
-    }
     private fun validateForm(email: String, password: String): Boolean {
 
         if (TextUtils.isEmpty(email)) {

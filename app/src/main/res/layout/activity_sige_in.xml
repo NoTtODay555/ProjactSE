@@ -85,9 +85,9 @@
             <EditText
                     android:paddingStart="10dp"
                     android:id="@+id/et_address"
-
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:inputType="textAutoComplete"
                     android:hint="AddressDetail"/>
 
             <EditText
@@ -95,6 +95,7 @@
                     android:id="@+id/et_District"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:inputType="textAutoComplete"
                     android:hint="District"/>
 
             <EditText
@@ -102,7 +103,8 @@
                     android:id="@+id/et_provice"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Provice"/>
+                    android:hint="Provice"
+                    android:inputType="textAutoComplete"/>
 
             <EditText
                     android:paddingStart="10dp"

@@ -6,7 +6,7 @@ import android.os.Bundle
 import android.view.View
 import kotlinx.android.synthetic.main.layout_signin.*
 
-class WaittingConfirmation : AppCompatActivity(),View.OnClickListener {
+class Padding : AppCompatActivity(),View.OnClickListener {
     override fun onClick(p0: View?) {
         when(p0){
             imageView4 -> {
@@ -19,7 +19,7 @@ class WaittingConfirmation : AppCompatActivity(),View.OnClickListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_waitting_confirmation)
-        TEXTBAR.text = "Requeted Exchange"
+        TEXTBAR.text = "Padding Excheang"
         imageView4.setOnClickListener(this)
 
     }

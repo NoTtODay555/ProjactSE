@@ -53,9 +53,9 @@
         </activity>
         <activity android:name=".Completed">
         </activity>
-        <activity android:name=".padding.Padding">
+        <activity android:name=".padding.Awaiting">
         </activity>
-        <activity android:name=".WaittingConfirmation">
+        <activity android:name=".Padding">
         </activity>
         <activity android:name=".Login.Login">
             <intent-filter>
@@ -69,6 +69,12 @@
         <activity android:name=".padding.addexchange.AddExchange">
         </activity>
         <activity android:name=".Suggestions">
+        </activity>
+        <activity android:name=".detail.DetailItem">
+        </activity>
+        <activity android:name=".SentExchange">
+        </activity>
+        <activity android:name=".request.Requested">
         </activity>
     </application>
 

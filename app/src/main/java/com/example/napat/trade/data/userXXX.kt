@@ -16,6 +16,12 @@ class userXXX {
     var provice : String? = ""
     var zipCode : String? = ""
     var idCard : String? = ""
+    var paddingException : ArrayList<figerAll> = arrayListOf()
+    var completed : ArrayList<figerAll> = arrayListOf()
+    var sentExchange : ArrayList<figerAll> = arrayListOf()
+    var awaiting : ArrayList<figerAll> = arrayListOf()
+    var request : ArrayList<figerAll> = arrayListOf()
+
 
     constructor(){
 
@@ -32,7 +38,13 @@ class userXXX {
         district: String,
         provice: String,
         zipCode: String,
-        idCard: String
+        idCard: String,
+        paddingException: ArrayList<figerAll>,
+        completed : ArrayList<figerAll>,
+        sentExchange : ArrayList<figerAll>,
+        awaiting : ArrayList<figerAll>,
+        request : ArrayList<figerAll>
+
     ) {
         this.id = id
         this.username = username
@@ -45,7 +57,14 @@ class userXXX {
         this.provice = provice
         this.zipCode = zipCode
         this.idCard = idCard
+        this.paddingException = paddingException
+        this.completed = completed
+        this.sentExchange = sentExchange
+        this.awaiting = awaiting
+        this.request = request
     }
+
+
 
     @Exclude
     fun toMap(): Map<String, Any> {
@@ -61,6 +80,11 @@ class userXXX {
         result["provice"] = provice!!
         result["zipCode"] = zipCode!!
         result["idCard"] = idCard!!
+        result["paddingException"] = paddingException!!
+        result["completed"] = completed!!
+        result["sentExchange"] = sentExchange!!
+        result["awaiting"] = awaiting!!
+        result["request"] = request!!
 
         return result
     }

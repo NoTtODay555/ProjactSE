@@ -12,16 +12,20 @@ class figerAll {
     var blamed : String = ""
     var itemSize : String = ""
     var ExchangeConditions : String = ""
+    var userId : String =""
+    var request : ArrayList<figerAll> = arrayListOf()
     constructor(){
 
     }
-    constructor(itemName: String, condition: String, blamed: String, itemSize: String, ExchangeConditions : String,image : ArrayList<String>) {
+    constructor(request : ArrayList<figerAll>,itemName: String, condition: String, blamed: String, itemSize: String, ExchangeConditions : String,image : ArrayList<String>,userId : String) {
         this.itemName = itemName
         this.condition = condition
         this.blamed = blamed
         this.itemSize = itemSize
         this.ExchangeConditions = ExchangeConditions
         this.image = image
+        this.userId = userId
+        this.request = request
     }
 
 
@@ -30,10 +34,12 @@ class figerAll {
         val result = HashMap<String, Any>()
         result["itemName"] = itemName!!
         result["condition"] = condition!!
-        result["blamed"] = blamed!!
-        result["itemSize"] = itemSize!!
-        result["ExchangeConditions"] = ExchangeConditions!!
+        result["blamed"] = blamed
+        result["itemSize"] = itemSize
+        result["ExchangeConditions"] = ExchangeConditions
         result["image"] = image
+        result["userId"] = userId
+        result["request"] = request
         return result
     }
 

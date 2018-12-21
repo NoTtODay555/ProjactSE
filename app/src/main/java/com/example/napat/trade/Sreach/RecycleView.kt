@@ -7,9 +7,9 @@ import android.view.ViewGroup
 import com.example.napat.trade.R
 import com.example.napat.trade.data.figerAll
 
-class RecycleView (val activity : Sreach,val listFiger : ArrayList<figerAll>) : RecyclerView.Adapter<ViewHolders>() {
+class RecycleView (val activity : Activity,val listFiger : ArrayList<figerAll>,var x : String) : RecyclerView.Adapter<ViewHolders>() {
     override fun onCreateViewHolder(p0: ViewGroup, p1: Int): ViewHolders {
-        return ViewHolders(LayoutInflater.from(p0.context).inflate(R.layout.item_crad, p0, false))
+        return ViewHolders(LayoutInflater.from(p0.context).inflate(R.layout.item_crad, p0, false),activity)
     }
 
     override fun getItemCount(): Int {
@@ -17,7 +17,7 @@ class RecycleView (val activity : Sreach,val listFiger : ArrayList<figerAll>) : 
     }
 
     override fun onBindViewHolder(p0: ViewHolders, p1: Int) {
-        return p0.onBindData(listFiger[p1])
+        return p0.onBindData(listFiger[p1],x)
     }
 
 }
